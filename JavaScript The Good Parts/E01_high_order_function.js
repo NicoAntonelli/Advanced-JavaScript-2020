@@ -7,7 +7,7 @@ Software Development Advanced Techniques and Technologies 2020
 Autor: Nico Antonelli
 */
 
-// Analyze if an Array contains any Prime Number (Primaly Test)
+// Criterion: Analyzing if an array contains any Prime Number (Primaly Test)
 function criterion_primes(n) {
     if (Number.isNaN(n) || !Number.isInteger(n)) { return false; }
     if (n === 2) { return true; }
@@ -18,26 +18,19 @@ function criterion_primes(n) {
     return true;
 }
 
-// If the Array doesn't contain any primes
+// If the Criterion is never satisfied for any element of the array
 function ifEmpty() {
     return "No element of the array satisfy the specified criterion"
 }
 
-// High Order Function
+// High order function
 function search(array, criterion, ifEmpty) {
-    let found = [];
-    array.forEach(element => {
-        if (criterion(element)) {
-            found.push(element);
-            // I can't break the forEach without throwing an Exception
-            // I will take advantage of this and return all the results, not just one
-        }
-    });
+    let found = array.filter(element => criterion(element));
     if (found.length) { return found; }
     return ifEmpty();
 }
 
-// Main Program
+// Main
 console.log("EXERCISE ONE: Primaly Test");
 var list = [12, -1, 3, "foo", 2, Math.PI, "bar", true, 17, 1, 67, 4];
 console.log("Array: ", list);
