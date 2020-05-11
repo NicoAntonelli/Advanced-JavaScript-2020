@@ -1,0 +1,31 @@
+:host {
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.searchLabel {
+    margin-bottom: 0rem;
+    font-size: medium;;
+}
+
+.tasks {
+    list-style: none;
+    padding-left: 0.25rem;
+    
+    li {
+        padding-top: 0.3rm;
+        padding-bottom: 0.3rem;
+        
+        button, span>button {
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+.completed {
+    color: blueviolet;
+    font-style: oblique;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+ 
