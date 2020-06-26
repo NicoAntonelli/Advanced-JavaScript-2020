@@ -1,5 +1,5 @@
 <div>
-  <h3>To-Do List</h3>
+  <h3>To-Do List (Basic Mode)</h3>
 
   <p class="searchLabel">New Task</p>
   <input type="text" #addInput placeholder="Cook some pasta" (keyup.enter)="addTask(addInput)">
@@ -10,16 +10,9 @@
   <ul class="tasks">
     <li *ngFor="let item of list; let i = index" [class.completed]="item.completed">
       {{item.description}}
-      <span *ngIf="item.completed === true">
-        <button (click)="toggle(item)">
-          Mark as Not Completed
-        </button>
-      </span>
-      <span *ngIf="item.completed === false">
-        <button (click)="toggle(item)">
-          Mark as Completed
-        </button>
-      </span>
+      <button (click)="toggle(item)">
+        Mark as <span *ngIf="item.completed === true">Not</span> Completed
+      </button>
       <button (click)="remove(i)">
         Delete
       </button>

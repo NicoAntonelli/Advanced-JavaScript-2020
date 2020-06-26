@@ -5,7 +5,7 @@
 
 .searchLabel {
     margin-bottom: 0rem;
-    font-size: medium;;
+    font-size: medium;
 }
 
 .tasks {
@@ -13,12 +13,10 @@
     padding-left: 0.25rem;
     
     li {
-        padding-top: 0.3rm;
+        padding-top: 0.1rem;
         padding-bottom: 0.3rem;
         
-        button, span>button {
-            margin-left: 0.25rem;
-        }
+        button { margin-left: 0.25rem; }
     }
 }
 

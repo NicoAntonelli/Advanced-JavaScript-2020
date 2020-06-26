@@ -16,15 +16,15 @@ export class AppComponent {
     {description: "Add (lots of) CSS to this 'UI'", completed: false}
   ];
   // currentTask
-  addTask(inputControl) {
-    if (inputControl.value === "") {
+  addTask(item) {
+    if (item.value === "") {
       return;
     }
     this.list.push({
-      description: inputControl.value,
+      description: item.value,
       completed: false
     });
-    inputControl.value = "";
+    item.value = "";
   }
   remove(index) {
     // const index = this.list.findIndex(each.description => each.description === item);
