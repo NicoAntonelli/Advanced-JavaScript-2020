@@ -1,4 +1,4 @@
-# Basic ToDo-List-with-Angular
+# Basic To-Do List with Angular
 Minimalist To-Do List made with Angular, only the basics, and all in an unique component.
 
 ## Angular CLI
